@@ -9,8 +9,8 @@ Esta es la plantilla base para la tarea de la clase. Tu objetivo es completar lo
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone [https://github.com/TU_USUARIO/api-nodejs-tarea.git](https://github.com/TU_USUARIO/api-nodejs-tarea.git)
-    cd api-nodejs-tarea
+    git clone [https://github.com/TU_USUARIO/api-nodejs-actividad.git](https://github.com/TU_USUARIO/api-nodejs-actividad.git)
+    cd api-nodejs-actividad
     ```
     (Reemplaza TU_USUARIO con tu nombre de usuario de GitHub).
 
