@@ -1,0 +1,24 @@
+{
+  "name": "api-node-actividad",
+  "version": "1.0.0",
+  "description": "Repositorio para los que deseen realizar la actividad de APIs con node/express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Richk81/api-node-actividad.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Richk81/api-node-actividad/issues"
+  },
+  "homepage": "https://github.com/Richk81/api-node-actividad#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

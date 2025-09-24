@@ -28,16 +28,32 @@ app.post('/productos', (req, res) => {
 // TAREA: Agregar un endpoint PUT para actualizar un producto.
 // Deberá recibir el ID del producto y los nuevos datos en el body.
 app.put('/productos/:id', (req, res) => {
-    // Lógica para encontrar y actualizar el producto
-    res.status(404).send('Producto no encontrado');
+    const id = parseInt(req.params.id);
+    const index = productos.findIndex(p => p.id === id);
+
+    if (index !== -1) {
+        productos[index] = { ...productos[index], ...req.body };
+        res.json(productos[index]);
+    } else {
+        res.status(404).send('Producto no encontrado');
+    }
 });
+
 
 // TAREA: Agregar un endpoint DELETE para eliminar un producto.
 // Deberá recibir el ID del producto en los parámetros de la URL.
 app.delete('/productos/:id', (req, res) => {
-    // Lógica para encontrar y eliminar el producto
-    res.status(404).send('Producto no encontrado');
+    const id = parseInt(req.params.id);
+    const index = productos.findIndex(p => p.id === id);
+
+    if (index !== -1) {
+        const eliminado = productos.splice(index, 1);
+        res.json({ mensaje: 'Producto eliminado', producto: eliminado[0] });
+    } else {
+        res.status(404).send('Producto no encontrado');
+    }
 });
+
 
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);
